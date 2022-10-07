@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import {Link} from 'react-router-dom';
 
 export default function Acai(){
     const [pequeno, setPequeno] = useState(0);
@@ -61,6 +62,9 @@ export default function Acai(){
                     <button onClick={respost}>Preço a pagar</button>
                     
                     <span>{resposta}</span>
+                </div>
+                <div>
+                    <Link to='/'><button>Voltar</button></Link>
                 </div>
             </section>
         </main>
