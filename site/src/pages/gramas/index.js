@@ -1,3 +1,4 @@
+import './index.scss'
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -24,25 +25,26 @@ export default function Gramas() {
 
 
     return (
-        <main>
+        <main className="cont-gramas">
             <section>
-                <div>
+                <div className="div-titulo">
                     <h1>Calculo de Gramas</h1>
                 </div>
             </section>
 
-            <section>
+            <section className='div-calculo'>
                 <label>
-                    Calculo Peso:
+                    Calcular Peso:
                     <input type='Number' value={grama} onChange={e => setGrama(e.target.value)} />
                 </label>
-
-                <button onClick={calculoFinal}>Calcular Peso</button>
+                <div className='div-botaoc'>
+                <button className='botao-calc' onClick={calculoFinal}>Calcular</button>
+                </div>
                 <span>{resposta}</span>
             </section>
 
             <div>
-                <Link to='/'><button>Voltar</button></Link>
+                <Link to='/'><button className='botao'>Voltar</button></Link>
             </div>
         </main>
     )
