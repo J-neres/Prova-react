@@ -1,15 +1,22 @@
+
 import React from 'react';
+import './index.scss';
 import { useState } from 'react';
-import {Link} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Acai(){
-    const [pequeno, setPequeno] = useState(0);
-    const [medio, setMedio] = useState(0);
-    const [grande, setGrande] = useState(0);
-    const [desconto, setDesconto] = useState(0);
+    const [pequeno, setPequeno] = useState('');
+    const [medio, setMedio] = useState('');
+    const [grande, setGrande] = useState('');
+    const [desconto, setDesconto] = useState('');
     const [resposta, setResposta] = useState('');
     
-    function respost    (){
+    const navigate = useNavigate();
+    function voltar(){
+        navigate('/')
+    }
+
+    function respost(){
         const resp = calculo(pequeno, medio, grande, desconto);
         setResposta(resp);
     }
@@ -23,48 +30,41 @@ export default function Acai(){
         let desc = desconto * calculo / 100;
         let total = calculo - desc;
         return total;
-
     }
     
-    
     return(
-        <main>
-            <section>
-                <h1>Info B Açai</h1>
+        <main className='bloco-fundo-acai'>
+            <section className='bloco-titulo-acai'>
+                <h1>Dinheiro</h1>
+                <h2>não traz</h2>
+                <h3>felicidade</h3>
+                <h4>Mas compra</h4>
+                <h5>açai</h5>
+                <h6>(Que é quase a mesma coisa)</h6>
             </section>
 
-            <section>
-                <div>
-                    <h1>Calcule o valor a pagar na sua compra de açai</h1>
+            <section className='bloco-final'>
+                <div className='titulo-bloco-final'>
+                    <h1>Calcule a quantidade de açai</h1>
                 </div>
 
-                <div>
-                    <label>
-                        Pote Pequeno:
-                        <input type='text' value={pequeno} onChange={e => setPequeno(e.target.value)}/>
-                    </label>
+                <div className='inputs'>
+                    <input type='number' placeholder='Pequeno' value={pequeno} onChange={e => setPequeno(e.target.value)}/>
+                    <input type='number' placeholder='Médio' value={medio} onChange={e => setMedio(e.target.value)}/>
+                    <input type='number' placeholder='Grande' value={grande} onChange={e => setGrande(e.target.value)}/>
+                    <input type='number' placeholder='Desconto' value={desconto} onChange={e => setDesconto(e.target.value)}/>
 
-                    <label>
-                        Pote Médio:
-                        <input type='text' value={medio} onChange={e => setMedio(e.target.value)}/>
-                    </label>
-
-                    <label>
-                        Pote Grande:
-                        <input type='text' value={grande} onChange={e => setGrande(e.target.value)}/>
-                    </label>
-
-                    <label>
-                        Desconto:
-                        <input type='text' value={desconto} onChange={e => setDesconto(e.target.value)}/>
-                    </label>
-
-                    <button onClick={respost}>Preço a pagar</button>
-                    
-                    <span>{resposta}</span>
                 </div>
-                <div>
-                    <Link to='/'><button>Voltar</button></Link>
+                <div className='Final'>
+                    <label>
+                        Resultado: R$ <span>{resposta}</span> reais.
+                    </label>
+
+                    <div className='botoes'>
+                        <button onClick={respost}>Preço a pagar</button>
+                        <button onClick={voltar}>Voltar</button>
+
+                    </div>
                 </div>
             </section>
         </main>

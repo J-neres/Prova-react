@@ -14,8 +14,8 @@ export default function Libra(){
 
     function verificarSigno(mes, nascimento){
         let msg = "";
-        if(mes == 'Setembro' && nascimento >=23 && nascimento <=30 || mes == 'Outubro' && nascimento >=1 && nascimento <=22){
-            msg="Seu signo é de Libra!" 
+        if((mes === 'Setembro') (nascimento >=23)  (nascimento <=30)  (mes === 'Outubro')  (nascimento >=1)  (nascimento <=22)){
+            msg="Seu signo é Libra!" 
         }
         else{
             msg = "Você não é do signo de libra"

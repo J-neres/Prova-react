@@ -1,0 +1,120 @@
+.bloco-fundo-acai{ 
+    padding-top:2em;
+
+    text-align: center;
+    .bloco-titulo-acai{
+        margin-left: 32em;
+        width: 35em;
+
+        text-align: center;
+        h1{
+            font-family: Agente Laranja;
+            font-size: 4em;
+        }
+
+        h2{
+            font-size: 2em; ;
+            font-family: Trick;
+        }
+
+        h3{
+            font-family: Moon;
+            font-size: 4em;
+        }
+
+        h4{
+            font-family: Squish;
+            font-size: 1.8em;
+        }
+
+        h5{
+            font-family: Teste1;
+            font-size: 4em;
+        }
+
+        h6{
+            font-family: Lettring;
+            font-size: 2em;
+        }
+    }
+
+    .bloco-final{
+        .titulo-bloco-final{
+            margin-top: 1.5em;
+
+            h1{
+                font-family: Moon;
+                font-size: 2em;
+
+                color: #9AACA4;
+            }
+        }
+
+        .inputs{
+            display: flex;
+            flex-direction: row;
+
+            margin-top: 1em;
+            margin-left: 22em;
+            input{
+                outline: none;
+                border: none;
+
+                margin-right: 2em;
+                padding: 1em;
+                width: 10em;
+
+                font-family: Trick;
+                font-size: 1em;
+                font-weight: bold;
+
+                background-color: #9AACA4;
+                color: #0E3B43;
+            }
+
+            input::placeholder{
+                font-family: Trick;
+                font-size: 1em;
+
+                text-align: center;
+            }
+        }
+
+        .Final{
+            margin-top: 2em;
+            label{
+                font-size: 1.8em;
+                font-family: Trick;
+
+                span{
+                    font-size: 1.2em;
+                    font-family: Trick;  
+                }
+            }
+        }
+
+        .botoes{
+            margin-top: 1em;
+
+            button{
+                outline: none;
+                border: none;
+                border-radius: 8px;
+                box-shadow: 5px 5px #000;
+    
+                font-size: 1em;
+                font-family: Bloc;
+    
+                color: #fff;
+                background-color: #9AACA4;
+    
+                margin-right: 1em;
+                padding: 1em 1em;
+            }
+
+            button:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}

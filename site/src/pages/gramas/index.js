@@ -1,11 +1,16 @@
 import './index.scss'
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function Gramas() {
     const [grama, setGrama] = useState(0);
     const [resposta, setResposta] = useState('');
+
+    const navigate = useNavigate();
+    function voltar(){
+        navigate('/')
+    }
 
     function calculoPeso(gramas){
         let valor = 3.50;
@@ -44,7 +49,7 @@ export default function Gramas() {
             </section>
 
             <div>
-                <Link to='/'><button className='botao'>Voltar</button></Link>
+                <button className='botao' onClick={voltar}>Voltar</button>
             </div>
         </main>
     )

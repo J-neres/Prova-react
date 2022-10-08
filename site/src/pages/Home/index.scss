@@ -1,0 +1,53 @@
+.Bloco-fundo-Home{
+    background-image: url('../../../public/images/bela-natureza-montanhosa-papel-de-parede-3840x2160_54.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    height: 100vh;
+    
+    .bloco-titulos{
+        text-align: center;
+        padding-top: 6em;
+        h1{
+            font-family: Fonte natureza;
+            font-size: 4em;
+
+            color: #fff;
+        }
+
+        h2{
+            font-family: Bloc;
+            font-size: 2em;
+
+            margin-top: 1em;
+            color: #fff;
+        }
+    }
+
+    .botoes{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        margin-top: 3em;
+        button{
+            outline: none;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 5px 5px #292266;
+
+            font-size: 1.5em;
+            font-family: Bloc;
+
+            color: #fff;
+            background-color: #EF476F;
+
+            margin-right: 1em;
+            padding: 1em 3em;
+        }
+
+        button:hover{
+            transform: scale(1.1);
+        }
+    }
+}

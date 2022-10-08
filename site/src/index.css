@@ -11,3 +11,54 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a, a:visited, a:active{
+  text-decoration: none;
+  color: inherit;
+}
+
+*{
+  margin: 0;
+}
+
+@font-face {
+  font-family: Fonte natureza;
+  src: url('../public/fonts/spacetime-regular.ttf');
+}
+
+@font-face {
+  font-family: Bloc;
+  src: url('../public/fonts/Peach\ Days.ttf');
+}
+
+@font-face {
+  font-family:Agente Laranja ;
+  src: url('../public/fonts/AGENTORANGE.TTF');
+}
+@font-face {
+  font-family:Moon ;
+  src: url('../public/fonts/Gemini\ Moon.otf');
+}
+@font-face {
+  font-family:Teste1 ;
+  src: url('../public/fonts/KGSummerSunshine.ttf');
+}
+@font-face {
+  font-family: Teste3;
+  src: url('../public/fonts/KGSummerSunshineShadow.ttf');
+}
+
+@font-face {
+  font-family: Trick;
+  src: url('../public/fonts/TRICK\ OR\ TREAT.ttf');
+}
+
+@font-face {
+  font-family: Squish;
+  src: url('../public/fonts/SquishyWhaleDemoRegular.ttf');
+}
+
+@font-face {
+  font-family: Lettring;
+  src: url('../public/fonts/Making-Lettering_DEMO.otf');
+}

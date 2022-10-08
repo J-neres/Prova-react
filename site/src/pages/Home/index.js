@@ -1,22 +1,32 @@
 import React from "react";
-
-import { Link } from "react-router-dom";
-
-
+import { useNavigate } from "react-router-dom";
+import './index.scss';
 
 export default function Home(){
+
+    const navigate = useNavigate();
+    function acai(){
+        navigate('/acai')
+    }
+    function libras(){
+        navigate('/libras')
+    }
+    function gramas(){
+        navigate('/gramas')
+    }
+
     return(
         <main>
-            <section>
-                <div>
+            <section className='Bloco-fundo-Home'>
+                <div className='bloco-titulos'>
                     <h1>Bem-Vindo a home</h1>
                     <h2>Selecione a prova que deseja visitar</h2>
                 </div>
 
-                <div>
-                    <Link to='/acai'><button>Açai</button></Link>
-                    <Link to='/libras'><button>Libras</button></Link>
-                    <Link to='/gramas'><button>Gramas</button></Link>
+                <div className='botoes'>                  
+                    <button onClick={acai}>Açai</button>
+                    <button onClick={libras}>Libras</button>
+                    <button onClick={gramas}>Gramas</button>
                 </div>
             </section>
         </main>
