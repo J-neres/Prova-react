@@ -20,6 +20,9 @@ export default function Home(){
     function febre(){
         navigate('/temperatura')
     }
+    function abastecimento(){
+        navigate('/abastecimento')
+    }
 
     return(
         <main>
@@ -35,7 +38,8 @@ export default function Home(){
                     <button onClick={gramas}>Gramas</button>
 
                     <button onClick={febre}>Temperatura</button>
-                </div>
+                    <button onClick={abastecimento}>Paradas</button>
+                </div> 
             </section>
         </main>
     )

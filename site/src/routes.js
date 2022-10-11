@@ -7,6 +7,7 @@ import Libra from './pages/signoLibra';
 import Gramas from './pages/gramas';
 
 import Temperatura from './pages/Febre';
+import Abastecimento from './pages/Abastecimento';
 
 export default function Index(){
     return(
@@ -18,6 +19,7 @@ export default function Index(){
                 <Route path='/gramas' element={<Gramas/>} />
 
                 <Route path='/temperatura' element={<Temperatura />} />
+                <Route path='/abastecimento' element={<Abastecimento />} />
             </Routes>
         </BrowserRouter>
     )
