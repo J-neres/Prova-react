@@ -14,9 +14,9 @@ export default function Home(){
     function gramas(){
         navigate('/gramas')
     }
-
-
-
+    function salario(){
+        navigate('/salarioLiquido')
+    }
     function febre(){
         navigate('/temperatura')
     }
@@ -36,7 +36,7 @@ export default function Home(){
                     <button onClick={acai}>Açai</button>
                     <button onClick={libras}>Libras</button>
                     <button onClick={gramas}>Gramas</button>
-
+                    <button onClick={salario}>Salario</button>
                     <button onClick={febre}>Temperatura</button>
                     <button onClick={abastecimento}>Paradas</button>
                 </div> 

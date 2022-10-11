@@ -1,26 +1,27 @@
 import './index.scss';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function SalarioLiq (){
+    const navigate = useNavigate();
     const [salario, setSalario] = useState(0);
     const [bonus, setBonus] = useState(0);
     const [desconto, setDesconto] = useState(0);
     const [resposta, setResposta] = useState(0);
 
-    
-
-    function calculos (s, b, d) {
-        let valorTotal = s * b + d;
-        // let bonusSalario = s  * b / 100//
-        // let salarioBruto = s + bonusSalario;
-        // let valorTotal = salarioBruto - d;//
-
-        return valorTotal;
-        
+    function voltar(){
+        navigate('/')
     }
 
-    function respost () {
-        let resp = calculos (salario, bonus, desconto);
+    function salar (s, b, d) {
+        let desconto = s * b / 100;
+        let salbr = s - desconto  ;
+
+        return salbr;
+    }
+
+    function respost(){
+        const resp = salar(salario, bonus, desconto);
         setResposta(resp);
     }
 
@@ -44,8 +45,15 @@ export default function SalarioLiq (){
                     Desconto:
                     <input type='Number' value={desconto} onChange={e => setDesconto(e.target.value)}/>
 
-                <div> <button onClick={respost}> Calcular </button> </div>
-                {resposta}
+                <div> 
+                    <button onClick={respost}> Calcular </button> 
+                
+                    {resposta}
+                </div>
+            </div>
+
+            <div>
+                <button onClick={voltar}>Voltar</button>
             </div>
         </section>
     )
