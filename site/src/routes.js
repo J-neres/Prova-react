@@ -6,6 +6,8 @@ import Acai from './pages/acaiPreço';
 import Libra from './pages/signoLibra';
 import Gramas from './pages/gramas';
 
+import Temperatura from './pages/Febre';
+
 export default function Index(){
     return(
         <BrowserRouter>
@@ -14,6 +16,8 @@ export default function Index(){
                 <Route path='/acai' element={<Acai/>}/>
                 <Route path='/libras' element={<Libra/>} />
                 <Route path='/gramas' element={<Gramas/>} />
+
+                <Route path='/temperatura' element={<Temperatura />} />
             </Routes>
         </BrowserRouter>
     )

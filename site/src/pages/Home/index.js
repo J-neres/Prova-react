@@ -15,6 +15,12 @@ export default function Home(){
         navigate('/gramas')
     }
 
+
+
+    function febre(){
+        navigate('/temperatura')
+    }
+
     return(
         <main>
             <section className='Bloco-fundo-Home'>
@@ -27,6 +33,8 @@ export default function Home(){
                     <button onClick={acai}>Açai</button>
                     <button onClick={libras}>Libras</button>
                     <button onClick={gramas}>Gramas</button>
+
+                    <button onClick={febre}>Temperatura</button>
                 </div>
             </section>
         </main>
