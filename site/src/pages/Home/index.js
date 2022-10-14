@@ -29,17 +29,21 @@ export default function Home(){
             <section className='Bloco-fundo-Home'>
                 <div className='bloco-titulos'>
                     <h1>Bem-Vindo a home</h1>
-                    <h2>Selecione a prova que deseja visitar</h2>
+                    <h2>Selecione o exercício que deseja visitar</h2>
                 </div>
 
                 <div className='botoes'>                  
                     <button onClick={acai}>Açai</button>
                     <button onClick={libras}>Libras</button>
                     <button onClick={gramas}>Gramas</button>
+                </div>
+
+                <div className="botoes-2">
                     <button onClick={salario}>Salario</button>
                     <button onClick={febre}>Temperatura</button>
                     <button onClick={abastecimento}>Paradas</button>
                 </div> 
+
             </section>
         </main>
     )

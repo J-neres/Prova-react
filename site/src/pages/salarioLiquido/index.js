@@ -14,10 +14,11 @@ export default function SalarioLiq (){
     }
 
     function salar (s, b, d) {
-        let desconto = s * b / 100;
-        let salbr = s - desconto  ;
+        let bonus = s * b / 100;
+        let salbr = s + bonus;
+        let pagamento = salbr - d;
 
-        return salbr;
+        return pagamento;
     }
 
     function respost(){

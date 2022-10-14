@@ -1,0 +1,99 @@
+.Container-febre{
+    text-align: center;
+    margin-right: 2em;
+    margin-top: 7em;
+    
+    background-image: url('../../../public/images/termometro.png');
+    background-repeat: no-repeat;
+
+    height: 40em;
+    
+    h1{
+        font-family: Snow;
+        font-size: 4.1em;
+
+        text-align: end;
+
+        color: #8fe2fc;
+    }
+
+    .input-temperatura{
+        margin-top: 2.5em;
+        text-align: center;
+        label{
+            font-family: day;
+            font-size: 2em;
+
+            color: #fb9729;
+        }
+        input{
+            outline: none;
+            border: 2px solid #fb9729;
+            border-radius: 10px;
+
+            font-size:15px ;
+            font-family: Agente laranja;
+
+            margin-left: 1em;
+            padding: 8px;
+            width: 12em;
+        }
+    }
+
+    .resposta{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        button{
+            font-family: Trick;
+            font-size: 1.5em;
+
+            color: #fff;
+            background-color: #3b97d3 ;
+
+            border: none;
+            border-radius: 5px;
+
+            padding: 1em;
+
+            margin-right: 2em;
+            margin-left: 10em;
+            margin-top: 2em;
+
+            box-shadow: 8px 10px 10px #8fe2fc;
+        }
+        button:hover{
+            transform: scale(1.1);
+        }
+
+        span{
+            font-size: 1.5em;
+            font-family: Trick;
+    
+            margin-top: 1.8em;
+    
+            padding: 1em;
+            width: 15em;
+        }
+    }
+
+    .espacamento-botao{
+        margin-top: 5em;
+
+        button{
+            font-size: 2em;
+            font-family:Trick;
+
+            border: none;
+            border-radius: 10px;
+            box-shadow: 5px 8px 1px #1e1e1e;
+
+            padding: 0.5em 1em;
+        }   
+    }
+    button:hover{
+        transform: scale(1.1);
+    }
+}
+

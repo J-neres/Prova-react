@@ -49,10 +49,10 @@ export default function Acai(){
                 </div>
 
                 <div className='inputs'>
-                    <input type='number' placeholder='Pequeno' value={pequeno} onChange={e => setPequeno(e.target.value)}/>
-                    <input type='number' placeholder='Médio' value={medio} onChange={e => setMedio(e.target.value)}/>
-                    <input type='number' placeholder='Grande' value={grande} onChange={e => setGrande(e.target.value)}/>
-                    <input type='number' placeholder='Desconto' value={desconto} onChange={e => setDesconto(e.target.value)}/>
+                    <input type='number' placeholder='Pote Pequeno' value={pequeno} onChange={e => setPequeno(e.target.value)}/>
+                    <input type='number' placeholder='Pote Médio' value={medio} onChange={e => setMedio(e.target.value)}/>
+                    <input type='number' placeholder='Pote Grande' value={grande} onChange={e => setGrande(e.target.value)}/>
+                    <input type='number' placeholder='Pote Desconto' value={desconto} onChange={e => setDesconto(e.target.value)}/>
 
                 </div>
                 <div className='Final'>
