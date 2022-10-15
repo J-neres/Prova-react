@@ -62,3 +62,11 @@ a, a:visited, a:active{
   font-family: Lettring;
   src: url('../public/fonts/Making-Lettering_DEMO.otf');
 }
+@font-face{
+  font-family: Snow;
+  src: url('../public/fonts/Snaps\ Taste\ Christmas.otf');
+}
+@font-face {
+  font-family: Day;
+  src: url('../public/fonts/SNOWY\ DAY.ttf');
+}

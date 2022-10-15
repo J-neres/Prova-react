@@ -50,4 +50,31 @@
             transform: scale(1.1);
         }
     }
+
+    .botoes-2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        margin-top: 2em;
+        button{
+            outline: none;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 5px 5px #EF476F;
+
+            font-size: 1.5em;
+            font-family: Bloc;
+
+            color: #292266;
+            background-color: #fff;
+
+            margin-right: 1em;
+            padding: 1em 3em;
+        }
+
+        button:hover{
+            transform: scale(1.1);
+        }
+    }
 }

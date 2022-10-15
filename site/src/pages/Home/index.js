@@ -35,7 +35,7 @@ export default function Home(){
             <section className='Bloco-fundo-Home'>
                 <div className='bloco-titulos'>
                     <h1>Bem-Vindo a home</h1>
-                    <h2>Selecione a prova que deseja visitar</h2>
+                    <h2>Selecione o exercício que deseja visitar</h2>
                 </div>
 
                 <div >          
@@ -54,6 +54,7 @@ export default function Home(){
                         <button onClick={cinema}>cinema</button>
                     </div>
                 </div> 
+
             </section>
         </main>
     )
