@@ -70,3 +70,7 @@ a, a:visited, a:active{
   font-family: Day;
   src: url('../public/fonts/SNOWY\ DAY.ttf');
 }
+@font-face {
+  font-family: Gecko;
+  src: url('../public/fonts/Comic\ Gecko\ .ttf');
+}
