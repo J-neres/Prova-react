@@ -29,8 +29,11 @@ export default function Abastecimento(){
 
     return(
         <main>
-            <section>
+            <section className='cont-abastecimento'>
                 <div>
+                    <h1>Paradas para Abastecimento</h1>
+                </div>
+                <div className='div-calculo'>
                     <label>
                         Capacidade:
                         <input type='number' value={capacidade} onChange={e => setCapacidade(e.target.value)}/>
@@ -44,16 +47,22 @@ export default function Abastecimento(){
                     <label>
                         Distância:
                         <input type='number' value={distancia} onChange={e => setDistancia(e.target.value)}/>
-                    </label>
+                    </label> 
 
-                    <button onClick={repost}>Calcular paradas</button>
+                    <div className='div-resp'>
+                        {resposta}
+                    </div>
+
+                    <div className='div-botao'>
+                        <button onClick={repost}>Calcular paradas</button>
+                    </div>
                 </div>
 
                 <div>
-                    {resposta}
+                    <button onClick={voltar}>Voltar Home</button>
                 </div>
             </section>
-            <button onClick={voltar}>Voltar Home</button>
+            
         </main>
     )
 }

@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function SalarioLiq (){
-    const navigate = useNavigate();
+    const navigate = useNavigate(0);
     const [salario, setSalario] = useState(0);
     const [bonus, setBonus] = useState(0);
-    const [desconto, setDesconto] = useState(0);
+    const [desconto, setDesconto] = useState();
     const [resposta, setResposta] = useState(0);
 
     function voltar(){
@@ -15,10 +15,10 @@ export default function SalarioLiq (){
 
     function salar (s, b, d) {
         let bonus = s * b / 100;
-        let salbr = s + bonus;
-        let pagamento = salbr - d;
+        let bruto = bonus + s; 
+        let total =  bruto - d; 
 
-        return pagamento;
+        return total;
     }
 
     function respost(){
@@ -27,34 +27,38 @@ export default function SalarioLiq (){
     }
 
     return (
-        <section>
-            <div>
+        <section className='cont-salario'>
+            <div className='div-titulo'>
                 <h1>Salário líquido</h1>
-
-                    Informe seu salário:
-                    <input type='Number' value={salario} onChange={e => setSalario(e.target.value)}/>
-
             </div>
+            
+            <div className='div-calculo'>
+                <div className=' '>
+                        Informe seu salário:
+                        <input type='Number' value={salario} onChange={e => setSalario(Number(e.target.value))}/>
 
-            <div>        
-                    Bônus:
-                    <input type='Number' value={bonus} onChange={e => setBonus(e.target.value)}/>
-            </div>
-
-            <div>
-
-                    Desconto:
-                    <input type='Number' value={desconto} onChange={e => setDesconto(e.target.value)}/>
-
-                <div> 
-                    <button onClick={respost}> Calcular </button> 
-                
-                    {resposta}
                 </div>
-            </div>
 
-            <div>
-                <button onClick={voltar}>Voltar</button>
+                <div>        
+                        Bônus:
+                        <input type='Number' value={bonus} onChange={e => setBonus(Number(e.target.value))}/>
+                </div>
+
+                <div>
+
+                        Desconto:
+                        <input type='Number' value={desconto} onChange={e => setDesconto(Number(e.target.value))}/>
+
+                    <div className='div-botao'> 
+                        {resposta}
+                        <button onClick={respost}> Calcular </button> 
+                    </div>
+                    <div>
+                    <button  onClick={voltar}>Voltar</button>
+                </div>
+                </div>
+
+                
             </div>
         </section>
     )

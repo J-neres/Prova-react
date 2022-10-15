@@ -36,11 +36,11 @@ export default function Temperatura(){
 
     return(
         <main>
-            <section>
-                <div>
+            <section className="cont-cinema">
+                <div className="div-titulo">
                     <h1>Cinema</h1>
                 </div>
-                <div>
+                <div className="div-calculo">
                     <h3>Ingressos</h3>
                     <label>
                         Inteiras: 
@@ -54,21 +54,22 @@ export default function Temperatura(){
 
                     <div>
                         <label>
-                            Dia da semana: 
+                            Quarta-Feira: 
                             <input type='checkbox' value={dia} onChange={e => setDia(e.target.checked)} />
                         </label>
-
+                        &nbsp; &nbsp;
                         <label>
                             Filme nacional: 
                             <input type='checkbox' value={nacional} onChange={e => setNacional(e.target.checked)} />
                         </label>
                         <div> <span>{resposta}</span> </div>
                     </div>
-
-                    <button onClick={calculo}>Calcular</button>
+                    <div className="div-botao">
+                        <button className="botao" onClick={calculo}>Calcular</button>
+                    </div>
                 </div>
+                <button onClick={voltar}>Voltar</button>
             </section>
-            <button onClick={voltar}>Voltar</button>
         </main>
     )
 }

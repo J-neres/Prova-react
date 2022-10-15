@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import './index.scss';
 
 export default function Libra(){
     const [mes, setMes] = useState('');
@@ -14,7 +15,7 @@ export default function Libra(){
 
     function verificarSigno(mes, nascimento){
         let msg = "";
-        if((mes === 'Setembro') (nascimento >=23)  (nascimento <=30)  (mes === 'Outubro')  (nascimento >=1)  (nascimento <=22)){
+        if((mes === 'Setembro') && (nascimento >=23) && (nascimento <=30) || (mes === 'Outubro') && (nascimento >=1) && (nascimento <=22)){
             msg="Seu signo é Libra!" 
         }
         else{
@@ -24,15 +25,15 @@ export default function Libra(){
         return msg;
     }
     return(
-        <main>
+        <main className="cont-signo">
             <section>
-                <div>
+                <div className="div-titulo">
                     <h1>Verifique se você é do signo de libra</h1>
                 </div>
             </section>
 
             <section>
-                <div>
+                <div className="div-calculo">
                     <label>
                         Mês:
                         <input type='text' value={mes} onChange={e => setMes(e.target.value)}/>
@@ -42,8 +43,10 @@ export default function Libra(){
                         Dia de nascimento:
                         <input type='number' value={nascimento} onChange={e => setNascimento(e.target.value)}/>
                     </label>
-                    
-                    <button onClick={resp}>Verificar Signo</button>
+
+                    <div className="div-botao">
+                        <button onClick={resp}>Verificar Signo</button>
+                    </div>
 
                     <span>{resposta}</span>
                 </div>

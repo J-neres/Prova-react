@@ -40,11 +40,11 @@ export default function Temperatura(){
     }
     return(
         <main>
-            <section>
-                <div>
+            <section className="cont-ganhos">
+                <div className="div-titulo">
                     <h1>Orçamento familiar</h1>
                 </div>
-                <div>
+                <div className="div-calculo">
                     <label>
                         Ganhos:
                         <input type='number' value={ganhos} onChange={e => setGanhos(e.target.value)} />
@@ -57,8 +57,8 @@ export default function Temperatura(){
                     </label>
                     <div> <span>{resposta}</span> </div>
                 </div>
+                <button onClick={voltar}>Voltar</button>
             </section>
-            <button onClick={voltar}>Voltar</button>
         </main>
     )
 }
