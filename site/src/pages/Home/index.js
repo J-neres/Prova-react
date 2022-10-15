@@ -23,6 +23,12 @@ export default function Home(){
     function abastecimento(){
         navigate('/abastecimento')
     }
+    function ganhos(){
+        navigate('/ganhos')
+    }
+    function cinema(){
+        navigate('/cinema')
+    }
 
     return(
         <main>
@@ -32,13 +38,21 @@ export default function Home(){
                     <h2>Selecione a prova que deseja visitar</h2>
                 </div>
 
-                <div className='botoes'>                  
-                    <button onClick={acai}>Açai</button>
-                    <button onClick={libras}>Libras</button>
-                    <button onClick={gramas}>Gramas</button>
-                    <button onClick={salario}>Salario</button>
-                    <button onClick={febre}>Temperatura</button>
-                    <button onClick={abastecimento}>Paradas</button>
+                <div >          
+                    <div className='botoes'>        
+                        <button onClick={acai}>Açai</button>
+                        <button onClick={libras}>Libras</button>
+                        <button onClick={gramas}>Gramas</button>
+                    </div>
+                    <div className="botoes">
+                        <button onClick={salario}>Salario</button>
+                        <button onClick={febre}>Temperatura</button>
+                        <button onClick={abastecimento}>Paradas</button>
+                    </div>
+                    <div className="botoes">
+                        <button onClick={ganhos}>ganhos</button>
+                        <button onClick={cinema}>cinema</button>
+                    </div>
                 </div> 
             </section>
         </main>

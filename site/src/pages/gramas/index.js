@@ -45,9 +45,9 @@ export default function Gramas() {
                 <div className='div-botaoc'>
                 <button className='botao-calc' onClick={calculoFinal}>Calcular</button>
                 </div>
-                <span>{resposta}</span>
+                
             </section>
-
+                <span>{resposta}</span>
             <div>
                 <button className='botao' onClick={voltar}>Voltar</button>
             </div>

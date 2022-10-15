@@ -8,6 +8,8 @@ import Gramas from './pages/gramas';
 import SalarioLiquido from './pages/salarioLiquido'
 import Temperatura from './pages/Febre';
 import Abastecimento from './pages/Abastecimento';
+import Ganhos from './pages/ganhos';
+import Cinema from './pages/cinema'
 
 export default function Index(){
     return(
@@ -20,6 +22,10 @@ export default function Index(){
                 <Route path='/salarioLiquido' element={<SalarioLiquido />} />
                 <Route path='/temperatura' element={<Temperatura />} />
                 <Route path='/abastecimento' element={<Abastecimento />} />
+                <Route path='/ganhos' element={<Ganhos />} />
+                <Route path='/abastecimento' element={<Abastecimento />} />
+                <Route path='/cinema' element={<Cinema />} />
+
             </Routes>
         </BrowserRouter>
     )
