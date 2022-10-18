@@ -9,7 +9,10 @@ import SalarioLiquido from './pages/salarioLiquido'
 import Temperatura from './pages/Febre';
 import Abastecimento from './pages/Abastecimento';
 import Ganhos from './pages/ganhos';
-import Cinema from './pages/cinema'
+import Cinema from './pages/cinema';
+import Intervalo from './pages/repetição';
+import Contar from './pages/contar';
+import Retangulo from './pages/retangulo';
 
 export default function Index(){
     return(
@@ -25,7 +28,9 @@ export default function Index(){
                 <Route path='/ganhos' element={<Ganhos />} />
                 <Route path='/abastecimento' element={<Abastecimento />} />
                 <Route path='/cinema' element={<Cinema />} />
-
+                <Route path='/repeticao' element={<Intervalo />}/> 
+                <Route path='/contar' element={<Contar />}/> 
+                <Route path='/retangulo' element={<Retangulo />}/> 
             </Routes>
         </BrowserRouter>
     )

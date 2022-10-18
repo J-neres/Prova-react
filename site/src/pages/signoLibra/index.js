@@ -57,7 +57,7 @@ export default function Libra(){
                 </div>
             </section>
 
-            <section className="bloco-final">
+            <section className="bloco-final-libra">
                 <div className="imagem-Libra">                   
                     <h1>Sobre libra</h1>
                     <p>23/09 a 22/10</p>

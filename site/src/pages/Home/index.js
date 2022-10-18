@@ -29,6 +29,15 @@ export default function Home(){
     function cinema(){
         navigate('/cinema')
     }
+    function repeticao(){
+        navigate('/repeticao')
+    }
+    function contar(){
+        navigate('/contar')
+    }
+    function retangulo(){
+        navigate('/retangulo')
+    }
 
     return(
         <main>
@@ -52,6 +61,11 @@ export default function Home(){
                     <div className="botoes">
                         <button onClick={ganhos}>ganhos</button>
                         <button onClick={cinema}>cinema</button>
+                        <button onClick={repeticao}>repetição</button>
+                    </div>
+                    <div className="botoes">
+                        <button onClick={contar}>contar</button>
+                        <button onClick={retangulo}>retangulo</button>
                     </div>
                 </div> 
 
