@@ -15,13 +15,12 @@ export default function Retangulo(){
 
     function ret(b, h){
         let a = [];
+        
         for(let i = 0; b > i; i++){
-            for(let x = 0; h > x; x++){
-                document.Write(a = [...a, '*'])
-            }
-            document.WriteLine(a = [...a, '*'])
+            a = [...a, '*'];
         }
         return a;
+        
     }
 
     function respost(){

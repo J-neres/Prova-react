@@ -13,6 +13,7 @@ import Cinema from './pages/cinema';
 import Intervalo from './pages/repetição';
 import Contar from './pages/contar';
 import Retangulo from './pages/retangulo';
+import Cafe from './pages/cafe';
 
 export default function Index(){
     return(
@@ -30,7 +31,8 @@ export default function Index(){
                 <Route path='/cinema' element={<Cinema />} />
                 <Route path='/repeticao' element={<Intervalo />}/> 
                 <Route path='/contar' element={<Contar />}/> 
-                <Route path='/retangulo' element={<Retangulo />}/> 
+                <Route path='/retangulo' element={<Retangulo />}/>
+                <Route path='/cafe' element={<Cafe/>} /> 
             </Routes>
         </BrowserRouter>
     )
