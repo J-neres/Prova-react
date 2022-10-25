@@ -38,6 +38,9 @@ export default function Home(){
     function retangulo(){
         navigate('/retangulo')
     }
+    function session(){
+        navigate('/session')
+    }
 
     return(
         <main>
@@ -66,6 +69,7 @@ export default function Home(){
                     <div className="botoes">
                         <button onClick={contar}>contar</button>
                         <button onClick={retangulo}>retangulo</button>
+                        <button onClick={session}>session</button>
                     </div>
                 </div> 
 

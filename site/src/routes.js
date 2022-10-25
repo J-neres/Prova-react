@@ -14,6 +14,7 @@ import Intervalo from './pages/repetição';
 import Contar from './pages/contar';
 import Retangulo from './pages/retangulo';
 import Cafe from './pages/cafe';
+import Session from './pages/session';
 
 export default function Index(){
     return(
@@ -33,6 +34,7 @@ export default function Index(){
                 <Route path='/contar' element={<Contar />}/> 
                 <Route path='/retangulo' element={<Retangulo />}/>
                 <Route path='/cafe' element={<Cafe/>} /> 
+                <Route path='/session' element={<Session/>}/>
             </Routes>
         </BrowserRouter>
     )
