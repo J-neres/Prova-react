@@ -1,3 +1,0 @@
-function alunos(qtdAlunos, ){
-
-}

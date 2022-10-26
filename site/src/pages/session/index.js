@@ -1,72 +1,68 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { criarArray, calcMedia, calcMaior, calcMenor } from "../services/notas";
 
-export default function Session(){
-    const [qtdAlunos, setQtdAlunos] = useState();
-    const [resposta , setResposta] = useState([]);
-    const [repost, setRepost] = useState();
-    const [max, setMax] = useState();
-    const [min, setMin] = useState();
+export default function Session() {
+    const [qtd, setQtd] = useState(0);
+    const [notasAlunos, setNotasAlunos] = useState([])
+
+    const [media, setMedia] = useState(0);
+    const [maior, setMaior] = useState(0);
+    const [menor, setMenor] = useState(0);
 
     const navigate = useNavigate();
-    function voltar(){
+    function voltar() {
         navigate('/')
     }
 
-    function adicionar(){
-        let alunos = [];
-        for(let i = 0; i < qtdAlunos; i++){
-            alunos = [...alunos, i]
-        }
-        setResposta(alunos);
+    function okQtd() {
+        const x = criarArray(qtd);
+        setNotasAlunos(x);
     }
 
-    function media(arr){
-        let media = 0;
-        for( let i; i < arr.lengh; i++) media = media + i;{
+    function alterar(pos, novoValor) {
+        notasAlunos[pos] = Number(novoValor);
+        setNotasAlunos([...notasAlunos]);
+    }
 
-        }
-        return media / arr.lengh; 
+    function calcular() {
+        const a = calcMedia(notasAlunos);
+        const b = calcMaior(notasAlunos);
+        const c = calcMenor(notasAlunos);
+
+        setMedia(a);
+        setMaior(b);
+        setMenor(c);
     }
 
 
-    function respost () {
-        const resp = media(arr); 
-        setRepost(resp);
-    }
-
-    return(
+    return (
         <main>
             <section>
-                <h1>Exercicio React</h1>
-
+                <h1>Exercício lógica com array</h1>
                 <div>
-                    <label>Qtd alunos:</label>
-                    <input type='number' value={qtdAlunos} onChange={e => setQtdAlunos(e.target.value)}/>
-                    <button onClick={adicionar}>OK</button>
+                    Qtd. Alunos: <input type='text' value={qtd} onChange={e => setQtd(e.target.value)} />
+                    <button onClick={okQtd}> ok </button>
                 </div>
 
-                {resposta.map((item, i) =>
+                {notasAlunos.map((item, pos) =>
                     <div>
-                        <label>aluno:{i + 1}</label>
-                        <input type='number' onChange={e => (e.target.value)}/>
+                        Aluno {pos + 1}: <input type='text' value={notasAlunos[pos]} onChange={e => alterar(pos, e.target.value)} />
                     </div>
                 )}
 
-                <button onClick={respost}>Calcular</button>
-                <span>{repost}</span>
+
+                <button onClick={calcular}> Calcular </button>
 
                 <div>
-                    <label>Media:</label>
+                    Média: {media}
                 </div>
-
                 <div>
-                    <label>Maior Nota:</label>
+                    Maior: {maior}
                 </div>
-
                 <div>
-                    <label>Menor Nota:</label>
+                    Menor: {menor}
                 </div>
 
             </section>
